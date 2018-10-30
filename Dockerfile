@@ -18,7 +18,7 @@ FROM ubuntu:18.04
 
 #RUN useradd -ms /bin/bash monero
 #USER monero
-#WORKDIR /home/monero
+WORKDIR /root
 
 COPY --chown=root:root --from=build /root/monerod /root/monerod
 
