@@ -16,14 +16,14 @@ RUN curl https://downloads.getmonero.org/cli/monero-linux-x64-v$MONERO_VERSION.t
   
 FROM ubuntu:18.04
 
-RUN useradd -ms /bin/bash monero
-USER monero
-WORKDIR /home/monero
+#RUN useradd -ms /bin/bash monero
+#USER monero
+#WORKDIR /home/monero
 
-COPY --chown=monero:monero --from=build /root/monerod /home/monero/monerod
+COPY --chown=monero:monero --from=build /root/monerod /root/monerod
 
 # blockchain loaction
-VOLUME /home/monero/.bitmonero
+#VOLUME /home/monero/.bitmonero
 
 EXPOSE 18080 18081
 
