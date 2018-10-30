@@ -20,10 +20,10 @@ FROM ubuntu:18.04
 #USER monero
 #WORKDIR /home/monero
 
-COPY --chown=monero:monero --from=build /root/monerod /root/monerod
+COPY --chown=root:root --from=build /root/monerod /root/monerod
 
 # blockchain loaction
-#VOLUME /home/monero/.bitmonero
+VOLUME /root/.bitmonero
 
 EXPOSE 18080 18081
 
