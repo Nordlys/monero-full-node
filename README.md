@@ -21,7 +21,7 @@ this can be fixed with the following steps
 **first start:**  
 you need to change the permission of the mounted volume to allow the monero user inside the container to write the blockain in the volume. To do this, you have to mount the volume where you want to store the blockchain to the container and chown that path to the monero user. e.g.
 
-`docker run -v xmrchain:/home/monero/.bitmonero -t --rm --name=monerod -u root --entrypoint=/bin/chown nordlys/monero-full-node -R monero:monero .bitmonero`
+`docker run -v xmrchain:/home/monero/.bitmonero -t --rm --name=monerod -u root --entrypoint=/bin/chown gitnordlys/monero-full-node -R monero:monero .bitmonero`
 
 you have to do this only once before first start.
 
